@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; font-src 'self' data:;"> -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="/Public/register.css"> 
+    <!-- include the stylesheet file -->
+    <link href="/register.css" rel="stylesheet" type="text/css">
+    <!-- <link rel="stylesheet" href="/Authetication/style.css"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="left-section ">
+            <h2>One of us?</h2>
+            <p class="p-text">If you have already signed up, that's great! Please LOGIN</p>
+            <button class="login-button" onclick="location.href='login.html'">LOGIN</button>
+            <img src="/Public/images/signup.jpg"  class="bottom-left-image">
+        </div>
+        <div class="right-section">
+            <h2>Sign up</h2>
+            <form  class="sign-up-form"  action="/register" method="post">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="Email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="sign-up-button">SIGN UP</button>
+            </form>
+        </div>
+    </div>
+    <!-- <signup src="/server.js"></signup> -->
+</body>
+</html>
+
