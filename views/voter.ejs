@@ -1,39 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voter Registration Form</title>
+    <link rel="icon" type="image/x-icon" href="/Public/images/favicon.ico.png">
     <link rel="stylesheet" href="/Public/voter.css">
 </head>
+
 <body>
 
-<div class="bg">
-    <div class="form-container">
-        <h2 style="margin-left:120px ;">Voter Registration</h2>
-        <form action="/submit_registration" method="post">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="Name" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="Email" required>
-
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-
-            <label for="dob">Date of Birth</label>
-            <input type="date" id="dob" name="DateOfBirth" required>
-
-            <label for="cnic">CNIC</label>
-            <input type="text" id="cnic" name="CNIC" required>
-
-            <label for="mobile">Mobile Number</label>
-            <input type="tel" id="mobile" name="Mobile_Num" required>
-
-            <button type="submit">Register</button>
-        </form>
+    <div class="bg">
+        <div class="form-container">
+            <h2 style="margin-left:270px ;">Voter Registration</h2>
+            <form action="/submit_registration" method="post">
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="Name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="Rollno">Roll No</label>
+                        <input type="Rollno" id="dob" name="Rollno" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="Universityr">University</label>
+                        <input type="University" id="University" name="University" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="Department">Department</label>
+                        <input type="Department" id="Department" name="Department" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="Semester">Semester</label>
+                        <input type="Semester" id="Semester" name="Semester" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="cnic">CNIC</label>
+                        <input type="text" id="cnic" name="CNIC" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="Email" id="Email" name="Email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="password">password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
     </div>
-</div>
 
 </body>
+
 </html>

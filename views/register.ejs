@@ -7,6 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Page</title>
+    <link rel="icon" type="image/x-icon" href="/Public/images/favicon.ico.png">
     <link rel="stylesheet" href="/Public/register.css"> 
     <!-- include the stylesheet file -->
     <link href="/register.css" rel="stylesheet" type="text/css">
@@ -17,14 +18,14 @@
         <div class="left-section ">
             <h2>One of us?</h2>
             <p class="p-text">If you have already signed up, that's great! Please LOGIN</p>
-            <button class="login-button" onclick="location.href='login.html'">LOGIN</button>
+            <a href="/login" > <button class="login-button" style="margin-left: 25px;">Login</button></a>
             <img src="/Public/images/signup.jpg"  class="bottom-left-image">
         </div>
         <div class="right-section">
             <h2>Sign up</h2>
             <form  class="sign-up-form"  action="/register" method="post">
                 <div class="input-group">
-                    <label for="name">Name</label>
+                    <label for="name"> Student Name</label>
                     <input type="text" id="name" name="Name" required>
                 </div>
                 <div class="input-group">

@@ -1,0 +1,85 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Vote</title>
+    <link rel="icon" type="image/x-icon" href="/Public/images/favicon.ico.png">
+    <link rel="stylesheet" href="/Public/election-poll.css">
+</head>
+<body>
+    <header>
+        <h1>Online Voting System</h1>
+    </header>
+    <div class="main-container">
+        <div class="image-container">
+            <img src="/Public/images/candidate.jpeg" alt="Voting Image">
+        </div>
+        <div class="content-container">
+            <div class="container">
+                <h2>Cast your vote</h2>
+                <form action="/vote-cast" method="POST">
+                 <input type="hidden" name="electionID" value="1"> 
+                    <label for="candidate">Select Candidate</label>
+                    <select name="candidateID" id="candidate">
+                        <% if (candidates.length > 0) { %>
+                            <% candidates.forEach(function(candidate) { %>
+                                <option value="<%= candidate.candidateID %>"><%= candidate.candidate_Name %></option>
+                            <% }) %>
+                        <% }else { %>
+                            <option value="">No candidates available</option>
+                        <% } %>
+                    </select
+                    
+                    <input type="hidden" name="voterID" value="3"> 
+                    <input type="hidden" name="timestamp" value="4">
+                    <button type="submit">Submit Vote</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html> -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Submit Vote</title>
+     <link rel="icon" type="image/x-icon" href="/Public/images/favicon.ico.png">
+     <link rel="stylesheet" href="/Public/election-poll.css">
+ </head>
+ <body>
+     <header>
+         <h1>Online Voting System</h1>
+     </header>
+     <div class="main-container">
+         <div class="image-container">
+             <img src="/Public/images/candidate.jpeg" alt="Voting Image">
+         </div>
+         <div class="content-container">
+             <div class="container">
+                 <h2>Cast your vote</h2>
+                 <form action="/results" method="POST">
+                     <input type="hidden" name="electionID" value="1"> 
+ 
+                     <label for="candidate">Select Candidate</label>
+                     <select name="candidateID" id="candidate">
+                        <% candidates.forEach(function(candidate) { %>
+                            <option value="<%= candidate.candidateID %>"><%= candidate.candidate_Name %></option>
+                        <% }) %>
+                    </select>
+                    
+                     
+                     <input type="hidden" name="voterID" value="3"> 
+                     <input type="hidden" name="timestamp" value="4"> 
+                     <button type="submit">Submit Vote</button>
+                 </form>
+             </div>
+         </div>
+     </div>
+ </body>
+ </html>
+ 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Election</title>
+    <link rel="icon" type="image/x-icon" href="/Public/images/favicon.ico.png">
+    <link rel="stylesheet" href="/Public/election-poll.css">
+</head>
+<body>
+    <header>
+        <h1>Online Voting System</h1>
+    </header>
+    <div class="main-container">
+        <div class="image-container">
+            <img src="/Public/images/election.png" alt="Voting Image">
+        </div>
+        <div class="content-container">
+            <div class="container">
+                <h2>Select an Election Poll</h2>
+                <form action="/position" method="POST">
+                    <label for="election">Select Election</label>
+                    <select name="electionID" id="election">
+                        <% elections.forEach(function(election) { %>
+                            <option value="<%= election.electionID %>"><%= election.election_Name %></option>
+                        <% }) %>
+                    </select>
+                    <button type="submit">Next</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,54 +1,60 @@
-* {
-    padding: 0;
-    margin: 0;
-    background:white;
-    color: #fff;
+
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('images/BG.jpg');
-    /* Replace 'your-image-url.jpg' with the actual path to your image */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-color:#f0f0f0;
+    padding-top: 70px;
 }
 
-
 .container {
-    padding: 10px 10%;
     display: flex;
+    margin: auto;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: black;
+    padding: 30px;
+    padding-right: 30px;
+    background-color: #21667f;
     color: white;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000
+    z-index: 1000;
 }
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-left: 400px;
+.section {
+    padding: 30px;
 }
 
 .logo {
-    width: 80px;
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-right:  70px;
+    display: flex;
+    gap:19px
+
 }
 
 nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
 }
 
 nav ul li a {
+    color: white;
     text-decoration: none;
+    cursor: pointer;
     font-size: 18px;
     position: relative;
+    gap:15px
 }
 
 nav ul li a::after {
@@ -65,17 +71,40 @@ nav ul li a::after {
 nav ul li a:hover:after {
     width: 100%;
 }
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    background-color:white;
+}
 
-.header-text {
-    margin-top: 20%;
+.hero-text {
+    max-width: 100%;
+}
+
+.hero-text h1{
     font-size: 30px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    color: #ff0051b5;;
 }
 
-.header-text h1 {
-    font-size: 40px;
-    margin-top: 20px;
+.hero-text h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-.header-text h1 span {
-    color: #ff0051cd;
+
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    
 }
+

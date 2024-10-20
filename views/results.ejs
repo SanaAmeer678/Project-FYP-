@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Results</title>
+    <link rel="icon" type="image/x-icon" href="/Public/images/favicon.ico.png">
+    <link rel="stylesheet" href="/Public/results.css">
+</head>
+<body>
+
+    <header>
+        <h1>Online Voting System</h1>
+    </header>
+    <div class="main-container">
+        <div class="table-container">
+            <h2>Election Results</h2>
+            <table border="1">
+                <tr>
+                    <th>Election Name</th>
+                    <th>Candidate Name</th>
+                    <th>Vote Count</th>
+                </tr>
+                <% results.forEach(function(result) { %>
+                <tr>
+                    <td><%= result.election_Name %></td>
+                    <td><%= result.candidate_Name %></td>
+                    <td><%= result.voteCount %></td>
+                </tr>
+                <% }); %>
+            </table>
+        </div>
+        <div class="image-container">
+            <img src="/Public/images/vote.jpeg" alt="Voting Image">
+        </div>
+    </div>
+</body>
+</html>

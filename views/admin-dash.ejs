@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Election Poll</title>
+    <link rel="icon" type="image/x-icon" href="/Public/images/favicon.ico.png">
+    <link rel="stylesheet" href="/Public/admin-dash.css">
+</head>
+<body>
+
+    <header>
+        <div class="container1">
+            <div class="logo">Admin Dashboard</div>
+            <nav>
+                <ul>
+                    <li><a href="/home" > <button class="dropbtn"  style="font-size: 17px;">Home</button></a></li>
+                    <!-- <li><a href="#Candidates List"></a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="left-section">
+            <img src="/Public/images/signup.jpg" alt="Election Image">
+        </div>
+        <div class="right-section">
+            <h2>Create Election Poll</h2>
+            <form action="/create-election" method="POST">
+                <div class="form-group">
+                    <label for="electionID">Election ID:</label>
+                    <input type="text" id="electionID" name="electionID" required>
+                </div>
+                <div class="form-group">
+                    <label for="electionName">Election Name:</label>
+                    <input type="text" id="electionName" name="election_Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" id="startDate" name="StartDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="endDate">End Date:</label>
+                    <input type="date" id="endDate" name="EndDate" required>
+                </div>
+                <button type="submit">Create Election</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

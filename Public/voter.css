@@ -34,12 +34,24 @@ body, html {
     align-items: center;
     font-size: 15px;
 }
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 800px;
+}
+.form-field {
+    flex: 1;
+    margin-right: 0px;
+}
 .form-container button {
     width: 30%;
     background-color: rgba(27,181,242);
     color: white;
     padding: 14px 20px;
-    margin-left: 160px;
+    margin-left: 288px;
+    margin-top: 18px;
     border:black;
     border-radius: 10px;
     cursor: pointer;

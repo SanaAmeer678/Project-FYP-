@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voters List</title>
+    <link rel="icon" type="image/x-icon" href="/Public/images/favicon.ico.png">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    background-color: #21667f;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+    font-size: 35px;
+    padding-left: 35px;
+    padding-top: 130px;
+
+}
+h2{
+    padding-left: 490px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+table {
+    width: 85%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 19px;
+    box-shadow: 0 1px 18px rgba(222, 10, 10, 0.639);
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 90px;
+}
+
+table thead tr {
+    background-color: #21667f;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid  #21667f;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+table tbody tr td {
+    text-align: left;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Online Voting System</h2>
+    </header>
+    <h1>Voters List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% voters.forEach(voter => { %>
+                <tr>
+                    <td><%= voter.Name %></td>
+                    <td><%= voter.Email %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

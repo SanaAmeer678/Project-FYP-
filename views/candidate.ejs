@@ -4,33 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Candidate Registration Form</title>
-    <!-- <link rel="stylesheet" href="http://localhost:34000/static/candidate.css"> -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.googleapis.com/css?family=Roboto:300,400,500' style-src 'self' http://localhost:34000/static/candidate.css' data:;"> -->
+    <link rel="icon" type="image/x-icon" href="/Public/images/favicon.ico.png">
     <link rel="stylesheet" href="/Public/candidate.css">
 </head>
 <body>
 <div class="bg">
     <div class="form-container">
-        <h2 style="margin-left: 115px;">Candidate Registration</h2>
-        <form action="/submit_registration" method="post">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="candidate_Name" required>
-
-            <label for="cnic">Party Name</label>
-            <input type="text" id="cnic" name="party" required>
-
-            <label for="mobile">Election ID</label>
-            <input type="tel" id="mobile" name="electionID" required>
-
-            <label for="dob">Date of Birth</label>
-            <input type="date" id="dob" name="DateOfBirth" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="Email" required>
-
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-
+        <h2>Candidate Registration</h2>
+        <form action="/candidate" method="post">
+            <div class="form-group">
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="candidate_Name" required>
+                </div>
+                <div class="form-field">
+                    <label for="Department">Department</label>
+                    <input type="text" id="party" name="Department" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-field">
+                    <label for="mobile">Election ID</label>
+                    <input type="tel" id="mobile" name="electionID" required>
+                </div>
+                <div class="form-field">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="DateOfBirth" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="Email" required>
+                </div>
+                <div class="form-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-field">
+                    <label for="Position">Position</label>
+                    <select id="Position" name="Position" required>
+                        <option value="DR">Departmental Representative(DR)</option>
+                        <option value="CR">Class Representative(CR)</option>
+                    </select>
+                </div>
+            </div>
             <button type="submit">Register</button>
         </form>
     </div>
